@@ -66,6 +66,15 @@ void perbaikanData(int p)
     }
 }
 
+void hapusDataM(int p) {
+    if (p >= 0 && p <= pos) {
+        for (int i = p; i < pos; i++) {
+            sikc[i] = sikc[i + 1];
+        }
+        pos--;
+    }
+}
+
 int main() {
 char pl;
 do
@@ -100,9 +109,14 @@ do
     break;  
 
    case '4':
-    // mPertama("ke- empat");
-    /* code */
-    break;  
+    cout << "\nMasukkan nomor mahasiswa yang ingin dihapus: ";
+    cin >> jml;
+    cin.ignore();
+    if (jml >= 1 && jml <= pos + 1) {
+        hapusDataM(jml- 1);  
+    }
+    break;
+
   case '5':
     /* code */
     break;
