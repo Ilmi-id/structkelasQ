@@ -29,7 +29,7 @@ int pos=-1;
 void masukanData(){
 pos++;
 system("cls");
-fflush(stdin);
+cout << "Masukkan data mahasiswa ke-" << (pos + 1) << ":" << endl;
 cout << "masukan nim: ";
 getline (cin, sikc[pos].nim);
 cout << "masukan nama: ";
@@ -41,6 +41,15 @@ cin >> sikc[pos].ipk;
 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
+void tampilkanData(int p){
+system("cls");
+fflush(stdin);
+     for (int i = 0; i <= p; i++) {
+cout << sikc[p].nim<<" , "<< sikc[p].nama<<" , "<< sikc[p].alamat<<" , "<<
+sikc[p].ipk<<endl;
+  }
+ cin.get();
+}
 
 int main() {
 char pl;
@@ -51,13 +60,18 @@ do
   switch (pl)
   {
    case '1':
-    /* code */
-    // mPertama("pertama");
-    masukanData();
+    int jml;
+    cout << "\nJumlah mahasiswa SIKC? :  ";
+    cin >> jml;
+    cin.ignore();
+    for (int i = 0; i < jml; i++) {
+        masukanData();
+    }
     break;
    case '2':
     // mPertama("ke- dua");
     /* code */ 
+    tampilkanData(pos);
     break;  
    case '3':
     // mPertama("ke- tiga");
