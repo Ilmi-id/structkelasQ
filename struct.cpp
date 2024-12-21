@@ -45,8 +45,8 @@ void tampilkanData(int p){
 system("cls");
 fflush(stdin);
      for (int i = 0; i <= p; i++) {
-cout << sikc[p].nim<<" , "<< sikc[p].nama<<" , "<< sikc[p].alamat<<" , "<<
-sikc[p].ipk<<endl;
+cout << sikc[i].nim<<" , "<< sikc[i].nama<<" , "<< sikc[i].alamat<<" , "<<
+sikc[i].ipk<<endl;
   }
  cin.get();
 }
